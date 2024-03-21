@@ -27,7 +27,7 @@ public class Main {
             throw new IOException();
         }
 
-        if (String.join("", nums).replaceAll("[0-9]", "").isEmpty()) { // Проверяем полученную запись
+        if (String.join("", nums).replaceAll("[0-9]", "").isEmpty()) { // Проверяем полученные числа
             arabicQ = true; // Используются только арабские цифры
             num1 = Integer.parseInt(nums[0]);
             num2 = Integer.parseInt(nums[1]);
@@ -61,7 +61,7 @@ public class Main {
         }
     }
 
-    static int romanToArabic(String roman) { // Ковертируем римские цифры в арабские
+    static int romanToArabic(String roman) { // Конвертируем римские цифры в арабские
         return roman.replaceAll("IX", "VIV")
                 .replaceAll("X", "VV")
                 .replaceAll("IV", "IIII")
@@ -69,7 +69,7 @@ public class Main {
                 .length();
     }
 
-    static String arabicToRoman(int arabic) { // Ковертируем арабские цифры в римские
+    static String arabicToRoman(int arabic) { // Конвертируем арабские цифры в римские
         return "I".repeat(arabic)
                 .replaceAll("IIIII", "V")
                 .replaceAll("IIII", "IV")
